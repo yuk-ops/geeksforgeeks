@@ -1,0 +1,15 @@
+
+
+class solve{
+    static ArrayList<String> generate(long N)
+    {
+       ArrayList<String> arr=new ArrayList<String>();
+       
+       for(int i=1;i<=N;i++)
+       {
+           arr.add(Integer.toBinaryString(i));
+       }
+       return arr;
+    }
+    
+}
