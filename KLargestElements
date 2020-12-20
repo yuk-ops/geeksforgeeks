@@ -1,0 +1,25 @@
+
+class Solution
+{
+    public static ArrayList<Integer> kLargest(int arr[], int n, int k)
+    {
+        // code here 
+        Arrays.sort(arr);
+        ArrayList<Integer>al=new ArrayList<>();
+        for(int i=n-1;i>0;i--)
+        {
+            if(i>=n-k)
+            {
+            al.add(arr[i]);
+            }
+        }
+        return al;
+    }
+}
+/*
+For Input:
+5 2
+12 5 787 1 23
+your output is: 
+787 23 
+*/
