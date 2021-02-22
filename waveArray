@@ -1,0 +1,21 @@
+    public static void convertToWave(int arr[], int n){
+        
+        // Your code here
+        int temp,i;
+        for(i=0;i<n-1;i++)
+        {
+            temp=arr[i];
+            arr[i]=arr[i+1];
+            arr[i+1]=temp;
+            i++;
+            
+        }
+        
+    }
+    
+}
+
+/*Output
+arr[] = {1,2,3,4,5}
+Output: 2 1 4 3 5
+*/
