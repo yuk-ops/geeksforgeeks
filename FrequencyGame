@@ -1,0 +1,28 @@
+class Geeks
+{
+    // Function to find largest number with minimum frequency
+    public static int LargButMinFreq(int arr[], int n)
+    {
+        // Your code here
+        Arrays.sort(arr);
+        int ans=0;
+        for(int i=n-1;i>0;i=i-2)
+        {
+        if(arr[i]!=arr[i-1])
+          {
+            ans=arr[i];
+            break;
+          }
+        }
+        return ans;
+        
+    }
+ /*
+ Output
+1
+5
+2 2 5 50 1
+
+Output:
+50
+*/
