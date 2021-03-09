@@ -1,0 +1,50 @@
+// { Driver Code Starts
+import java.io.*;
+import java.util.*;
+
+class GFG {
+    // Driver code
+    public static void main(String[] args) throws Exception {
+        BufferedReader br =
+            new BufferedReader(new InputStreamReader(System.in));
+        int t = Integer.parseInt(br.readLine().trim());
+        while (t-- > 0) {
+            String inputLine[] = br.readLine().trim().split(" ");
+            int n = Integer.parseInt(inputLine[0]);
+            int m = Integer.parseInt(inputLine[1]);
+            int arr1[] = new int[n];
+            int arr2[] = new int[m];
+            inputLine = br.readLine().trim().split(" ");
+            for (int i = 0; i < n; i++) {
+                arr1[i] = Integer.parseInt(inputLine[i]);
+            }
+class Solution {
+
+        // code here
+    public void merge(int arr1[], int arr2[], int n,int m)
+      {
+    
+    // code here
+int i1 = 0;
+int temp = 0;
+int i2 = 0;
+
+int idx = n-1;
+while(i1 < n && i2 < m){
+if(arr2[i2] < arr1[i1]){
+temp = arr1[idx];
+arr1[idx] = arr2[i2];
+
+arr2[i2] = temp;
+idx--;
+i2++;
+}else{
+i1++;
+}
+}
+
+Arrays.sort(arr1);
+Arrays.sort(arr2);
+
+      }
+}
